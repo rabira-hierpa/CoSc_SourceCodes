@@ -1,0 +1,27 @@
+
+                             Railway Managment System
+We developed this program for the railway management.
+
+What it basically does is that it has two accouts, Admin and Custormer
+ 
+In the Adimin mode, we designe this for the administrator to do
+
+1.Add train 
+2.Employee managment
+
+In the employee managment
+
+We added the following functionalities
+
+	1. Build the employee table
+	2. List the employee table
+	3. Search the employee table
+	4. Backup the the employee table
+	5. Restore [Backup file] the employee table
+
+In the customrer mode, we designed this for the customer to do
+
+1.Reserve Seates
+2.Show available trains
+
+
