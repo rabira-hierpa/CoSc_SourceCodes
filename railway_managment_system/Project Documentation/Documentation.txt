@@ -1,15 +1,15 @@
 
-                             Railway Managment System
+                             Railway Management System
 We developed this program for the railway management.
 
-What it basically does is that it has two accouts, Admin and Custormer
- 
-In the Adimin mode, we designe this for the administrator to do
+What it basically does is that it has two accounts, Admin and customer
 
-1.Add train 
-2.Employee managment
+In the Admin mode, we designed this for the administrator to do
 
-In the employee managment
+1.Add train
+2.Employee Management
+
+In the employee management
 
 We added the following functionalities
 
@@ -19,9 +19,7 @@ We added the following functionalities
 	4. Backup the the employee table
 	5. Restore [Backup file] the employee table
 
-In the customrer mode, we designed this for the customer to do
+In the customer mode, we designed this for the customer to do
 
-1.Reserve Seates
+1.Reserve Seats
 2.Show available trains
-
-
