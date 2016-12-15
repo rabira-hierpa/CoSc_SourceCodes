@@ -9,6 +9,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         StackPane rootPane = new StackPane();
         Button testButton = new Button("Hello");
+        testButton.setStyle("-fx-background-color: green");
         Scene mainScene = new Scene(rootPane, 400, 400);
         testButton.setOnAction(e -> primaryStage.close());
         rootPane.getChildren().add(testButton);
