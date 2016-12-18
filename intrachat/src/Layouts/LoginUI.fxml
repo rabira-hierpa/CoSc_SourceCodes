@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8"
+            fx:controller="Events.LoginValidation">
+    <children>
+        <ScrollPane fx:id="mainPane" fitToHeight="true" fitToWidth="true" layoutX="0.0" layoutY="1.0" pannable="true"
+                    prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+            <content>
+                <HBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0">
+                    <children>
+                        <VBox fx:id="loingPane" alignment="CENTER" spacing="10.0" style="-fx-background-color:white;"
+                              HBox.hgrow="ALWAYS">
+                            <children>
+                                <ImageView fx:id="logo" fitHeight="150.0" fitWidth="200.0" mouseTransparent="false"
+                                           pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Resources/LoginLogo.jpg"/>
+                                    </image>
+                                </ImageView>
+                                <TextField fx:id="username" alignment="CENTER" maxWidth="200.0" prefWidth="200.0"
+                                           promptText="User Name">
+                                    <VBox.margin>
+                                        <Insets left="50.0" right="50.0" fx:id="x1"/>
+                                    </VBox.margin>
+                                </TextField>
+                                <PasswordField fx:id="password" alignment="CENTER" maxWidth="200.0" prefWidth="200.0"
+                                               promptText="Password" VBox.margin="$x1"/>
+                                <Label fx:id="dbstatus"/>
+                                <HBox alignment="CENTER" prefHeight="57.0" prefWidth="351.0" spacing="10.0">
+                                    <children>
+                                        <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#Login"
+                                                style="-fx-background-color:#027DDA;&#10;" text="Login"
+                                                textAlignment="CENTER" textFill="WHITE">
+                                            <font>
+                                                <Font size="15.0" fx:id="x2"/>
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="signupBtn" font="$x2" mnemonicParsing="false"
+                                                style="-fx-background-color:#00A558;&#10;" text="Sign Up"
+                                                textAlignment="CENTER" textFill="WHITE"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets left="100.0" right="100.0"/>
+                            </padding>
+                        </VBox>
+                    </children>
+                </HBox>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>
