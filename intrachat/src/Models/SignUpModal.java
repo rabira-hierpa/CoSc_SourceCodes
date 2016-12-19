@@ -1,10 +1,11 @@
 package Models;
 
 import UserData.SqliteConnection;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -15,7 +16,7 @@ import java.sql.SQLException;
  */
 public class SignUpModal {
     Connection connection;
-
+    LoginModel loginModel = new LoginModel();
     public SignUpModal() {
         connection = SqliteConnection.connector();
         if (connection == null) {
@@ -34,27 +35,35 @@ public class SignUpModal {
     }
 
     public boolean insertNewUser(String name, String password) throws SQLException {
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
+        PreparedStatement preparedStatement;
         String query = "insert into users(username,password) values (?,?)";
         try {
-            preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, name);
-            preparedStatement.setString(2, password);
-            resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                return true;
+            if (isDBConnected()) {
+                if (loginModel.checkUser(name, password)) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "User already exits", ButtonType.CLOSE);
+                    alert.show();
+                    return false;
+                }
+                if (!name.equals(password)) {
+                    preparedStatement = connection.prepareStatement(query);
+                    preparedStatement.setString(1, name);
+                    preparedStatement.setString(2, password);
+                    preparedStatement.executeUpdate();
+                    preparedStatement.close();
+                    connection.close();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "Username and password must be Different!", ButtonType.CLOSE);
+                    alert.show();
+                    return false;
+                }
+            } else {
+                System.out.println("Unable to connect to db");
             }
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Unable to insert record");
             return false;
-        } finally {
-            assert preparedStatement != null;
-            preparedStatement.close();
-            assert resultSet != null;
-            resultSet.close();
         }
-        return false;
+        return true;
     }
 }

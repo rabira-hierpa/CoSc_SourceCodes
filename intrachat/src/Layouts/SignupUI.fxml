@@ -3,96 +3,96 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="mainPane" minHeight="200.0" minWidth="200.0" prefHeight="400.0"
+<VBox xmlns:fx="http://javafx.com/fxml/1" minHeight="200.0" minWidth="200.0" prefHeight="400.0"
       prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8"
       fx:controller="Events.SignUpController">
-    <children>
-        <Label fx:id="dbstatus" alignment="CENTER" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
-            <VBox.margin>
-                <Insets left="260.0" right="20.0" top="20.0"/>
-            </VBox.margin>
-        </Label>
-        <HBox alignment="CENTER">
-            <children>
-                <Label text="ID"/>
-                <Region prefWidth="30.0">
-                    <HBox.margin>
-                        <Insets right="55.0"/>
-                    </HBox.margin>
-                </Region>
-                <TextField fx:id="idfield">
-                    <HBox.margin>
-                        <Insets/>
-                    </HBox.margin>
-                </TextField>
-            </children>
-            <VBox.margin>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="80.0"/>
-            </VBox.margin>
-            <opaqueInsets>
-                <Insets/>
-            </opaqueInsets>
-        </HBox>
-        <HBox alignment="CENTER">
-            <children>
-                <Label text="Username"/>
-                <Region prefWidth="30.0"/>
-                <TextField fx:id="userName">
-                    <HBox.margin>
-                        <Insets/>
-                    </HBox.margin>
-                </TextField>
-            </children>
-            <VBox.margin>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
-            </VBox.margin>
-            <opaqueInsets>
-                <Insets/>
-            </opaqueInsets>
-        </HBox>
-        <HBox alignment="CENTER">
-            <children>
-                <Label text="Password"/>
-                <Region prefWidth="30.0"/>
-                <PasswordField fx:id="pass">
-                    <HBox.margin>
-                        <Insets/>
-                    </HBox.margin>
-                </PasswordField>
-            </children>
-            <VBox.margin>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
-            </VBox.margin>
-            <opaqueInsets>
-                <Insets/>
-            </opaqueInsets>
-        </HBox>
-        <HBox alignment="CENTER">
-            <children>
-                <Label text="E-mail"/>
-                <Region prefWidth="30.0">
-                    <HBox.margin>
-                        <Insets right="20.0"/>
-                    </HBox.margin>
-                </Region>
-                <TextField fx:id="email">
-                    <HBox.margin>
-                        <Insets/>
-                    </HBox.margin>
-                </TextField>
-            </children>
-            <VBox.margin>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
-            </VBox.margin>
-            <opaqueInsets>
-                <Insets/>
-            </opaqueInsets>
-        </HBox>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-            <children>
-                <Button mnemonicParsing="false" text="Sign Up"/>
-                <Button mnemonicParsing="false" text="Back"/>
-            </children>
-        </HBox>
-    </children>
+   <children>
+      <Label fx:id="dbstatus" alignment="CENTER" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets left="260.0" right="20.0" top="20.0"/>
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER">
+         <children>
+            <Label alignment="BASELINE_RIGHT" contentDisplay="RIGHT" text="ID"/>
+            <Region prefWidth="30.0">
+               <HBox.margin>
+                  <Insets right="55.0"/>
+               </HBox.margin>
+            </Region>
+            <TextField fx:id="idfield">
+               <HBox.margin>
+                  <Insets/>
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="80.0"/>
+         </VBox.margin>
+         <opaqueInsets>
+            <Insets/>
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Label alignment="BASELINE_RIGHT" contentDisplay="RIGHT" text="Username"/>
+            <Region prefWidth="30.0"/>
+            <TextField fx:id="userName">
+               <HBox.margin>
+                  <Insets/>
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </VBox.margin>
+         <opaqueInsets>
+            <Insets/>
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Label contentDisplay="RIGHT" text="Password"/>
+            <Region prefWidth="30.0"/>
+            <PasswordField fx:id="pass">
+               <HBox.margin>
+                  <Insets/>
+               </HBox.margin>
+            </PasswordField>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </VBox.margin>
+         <opaqueInsets>
+            <Insets/>
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Label contentDisplay="RIGHT" text="E-mail"/>
+            <Region prefWidth="30.0">
+               <HBox.margin>
+                  <Insets right="20.0"/>
+               </HBox.margin>
+            </Region>
+            <TextField fx:id="email">
+               <HBox.margin>
+                  <Insets/>
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </VBox.margin>
+         <opaqueInsets>
+            <Insets/>
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button fx:id="signBtn" mnemonicParsing="false" onAction="#signup" text="Sign Up"/>
+            <Button fx:id="backBtn" mnemonicParsing="false" onAction="#goBack" text="Back"/>
+         </children>
+      </HBox>
+   </children>
 </VBox>
